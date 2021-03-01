@@ -1,23 +1,22 @@
 package transports
 
-type getRequest struct{}
-
-type getResponse struct {
+type GetRequest struct{}
+type GetResponse struct {
 	Date string `json:"date"`
-	Err  string `json: "err,omitempty"`
+	Err  string `json:"err,omitempty"`
 }
 
-type validateRequest struct {
+type ValidateRequest struct {
 	Date string `json:"date"`
 }
 
-type validateResponse struct {
+type ValidateResponse struct {
 	Valid bool   `json:"valid"`
 	Err   string `json:"err,omitempty"`
 }
 
-type statusRequest struct{}
+type StatusRequest struct{}
 
-type statusResponse struct {
+type StatusResponse struct {
 	Status string `json:"status"`
 }
